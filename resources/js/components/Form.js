@@ -17,7 +17,7 @@ class Form extends Component {
     }
     sub=(e)=>{
         e.preventDefault();
-        axios.post('http://127.0.0.1:8000/store',this.state)
+        axios.post('https://laravelreactcrud.herokuapp.com/store',this.state)
         .then(res=>{
             console.log(res.data);
         })

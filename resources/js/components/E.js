@@ -11,7 +11,7 @@ class E extends Component {
     }
     componentDidMount() {
         let id=this.props.match.params.id;
-        axios.get(`http://127.0.0.1:8000/getdata/edit/${id}`)
+        axios.get(`https://laravelreactcrud.herokuapp.com/getdata/edit/${id}`)
             .then(res => {
                 console.log()
                 this.setState({
@@ -25,7 +25,7 @@ class E extends Component {
     }
     esub=e=>{
         e.preventDefault();
-        axios.post('http://127.0.0.1:8000/update',this.state)
+        axios.post('https://laravelreactcrud.herokuapp.com/update',this.state)
         .then(res=>{
             console.log(res.data);
         })

@@ -11,7 +11,7 @@ class Table extends Component {
     }
     
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/getdata')
+        axios.get('https://laravelreactcrud.herokuapp.com/getdata')
             .then(res => {
                 this.setState({ data: res.data });
             })
@@ -22,7 +22,7 @@ class Table extends Component {
         const id=e.target.value;
         const data=this.state.data.filter(data=>data.id!=id);
          this.setState({data:data});
-        axios.delete('http://127.0.0.1:8000/delete/'+id)
+        axios.delete('https://laravelreactcrud.herokuapp.com/delete/'+id)
         .then(re=>{ 
          
         })
